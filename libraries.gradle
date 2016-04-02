@@ -23,23 +23,22 @@ ext {
   espressoVersion = '2.2.1'
   runnerVersion = '0.4'
   rulesVersion = '0.4'
+  libraries = [appCompat            : "com.android.support:appcompat-v7:${androidSupportVersion}",
+               palette              : "com.android.support:palette-v7:${androidSupportVersion}",
+               gson                 : "com.google.code.gson:gson:${gsonVersion}",
+               butterknife          : "com.jakewharton:butterknife:${butterknifeVersion}",
+               dagger               : "com.google.dagger:dagger:${daggerVersion}",
+               daggerCompiler       : "com.google.dagger:dagger-compiler:${daggerVersion}",
+               javaXAnnotation      : "javax.annotation:jsr250-api:${javaXAnnotationVersion}",
+               rxjava               : "io.reactivex:rxjava:${rxjavaVersion}",
+               rxandroid            : "io.reactivex:rxandroid:${rxandroidVersion}",
+               androidSupport       : "com.android.support:support-v13:${androidSupportVersion}",
+               supportAnnotations   : "com.android.support:support-annotations:${androidSupportVersion}",
+               javaxInject          : "javax.inject:javax.inject:${javaxInjectVersion}",
+               retrofit             : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+               retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+               supportDesign        : "com.android.support:design:${androidSupportVersion}",]
 
-  libraries = [appCompat         : "com.android.support:appcompat-v7:${androidSupportVersion}",
-               palette           : "com.android.support:palette-v7:${androidSupportVersion}",
-               gson              : "com.google.code.gson:gson:${gsonVersion}",
-               butterknife       : "com.jakewharton:butterknife:${butterknifeVersion}",
-               dagger            : "com.google.dagger:dagger:${daggerVersion}",
-               daggerCompiler    : "com.google.dagger:dagger-compiler:${daggerVersion}",
-               javaXAnnotation   : "javax.annotation:jsr250-api:${javaXAnnotationVersion}",
-               rxjava            : "io.reactivex:rxjava:${rxjavaVersion}",
-               rxandroid         : "io.reactivex:rxandroid:${rxandroidVersion}",
-               androidSupport    : "com.android.support:support-v13:${androidSupportVersion}",
-               supportAnnotations: "com.android.support:support-annotations:${androidSupportVersion}",
-               javaxInject       : "javax.inject:javax.inject:${javaxInjectVersion}",
-               retrofit          : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
-               supportDesign     : "com.android.support:design:${androidSupportVersion}",
-
-  ]
 
   testLibraries = [dexmaker       : "com.google.dexmaker:dexmaker:${dexmakerVersion}",
                    dexmakerMockito: "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",

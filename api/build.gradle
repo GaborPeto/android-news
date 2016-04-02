@@ -5,6 +5,7 @@ dependencies {
   compile project(':domain')
   compile rootProject.ext.libraries.gson
   compile rootProject.ext.libraries.retrofit
+  compile rootProject.ext.libraries.retrofitGsonConverter
 
   testCompile testLibraries.junit
   testCompile testLibraries.mockito

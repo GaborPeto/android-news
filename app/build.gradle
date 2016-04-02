@@ -1,15 +1,26 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+def versionBuild = 0
 
 android {
-  compileSdkVersion 23
-  buildToolsVersion "23.0.3"
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
 
   defaultConfig {
     applicationId "com.thinkabstract.exercise.news"
-    minSdkVersion 21
-    targetSdkVersion 23
-    versionCode 1
-    versionName "1.0"
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.compileSdkVersion
+    versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+    versionCode buildVersionCode(versionMajor, versionMinor, versionPatch, versionBuild)
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_7
+    targetCompatibility JavaVersion.VERSION_1_7
   }
   buildTypes {
     release {
@@ -17,10 +28,59 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+  dexOptions {
+    incremental true
+    javaMaxHeapSize "4g"
+  }
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  testCompile 'junit:junit:4.12'
-  compile 'com.android.support:appcompat-v7:23.2.1'
+  compile project(':domain')
+  compile project(':api')
+  compile project(':presentation')
+  compile project(':persistence')
+  compile rootProject.ext.libraries.appCompat
+  compile rootProject.ext.libraries.supportDesign
+  compile rootProject.ext.libraries.androidSupport
+  compile rootProject.ext.libraries.palette
+  compile rootProject.ext.libraries.butterknife
+  compile rootProject.ext.libraries.rxandroid
+  apt  rootProject.ext.libraries.daggerCompiler
+  provided rootProject.ext.libraries.javaXAnnotation
+
+  testCompile rootProject.ext.testLibraries.junit
+  testCompile rootProject.ext.testLibraries.mockito
+  testApt rootProject.ext.libraries.daggerCompiler
+
+  androidTestCompile rootProject.ext.testLibraries.runner
+  androidTestCompile rootProject.ext.testLibraries.rules
+  androidTestCompile rootProject.ext.testLibraries.espresso
+  androidTestCompile rootProject.ext.testLibraries.espressoContrib
+  androidTestCompile rootProject.ext.testLibraries.mockito
+  androidTestCompile rootProject.ext.testLibraries.dexmaker
+  androidTestCompile rootProject.ext.testLibraries.dexmakerMockito
+  androidTestApt rootProject.ext.libraries.daggerCompiler
+}
+
+configurations.all {
+  // Currently espresso is dependent on support-annotations:22.2.0
+  resolutionStrategy.force rootProject.ext.libraries.supportAnnotations
+}
+
+def buildVersionCode(major, minor, patch, build) {
+  def versionCode = "" + major
+
+  versionCode += doubleDigit(minor)
+  versionCode += doubleDigit(patch)
+  versionCode += doubleDigit(build)
+
+  return Integer.valueOf(versionCode)
+}
+
+def doubleDigit(input) {
+  if (input < 10) {
+    return "0" + input
+  } else {
+    return input
+  }
 }

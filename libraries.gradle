@@ -1,0 +1,52 @@
+ext {
+  minSdkVersion = 21
+  compileSdkVersion = 23
+  buildToolsVersion = '23.0.3'
+
+  //Android
+  rxandroidVersion = '1.1.0'
+  androidSupportVersion = '23.2.+'
+  butterknifeVersion = '7.0.1'
+
+  //Java
+  daggerVersion = '2.1'
+  javaXAnnotationVersion = '1.0'
+  rxjavaVersion = '1.1.2'
+  retrofitVersion = '2.0.1'
+  gsonVersion = '2.6.2'
+  javaxInjectVersion = '1'
+
+  //Testing
+  junitVersion = '4.11'
+  dexmakerVersion = '1.2'
+  mockitoVersion = '1.9.5'
+  espressoVersion = '2.2.1'
+  runnerVersion = '0.4'
+  rulesVersion = '0.4'
+
+  libraries = [appCompat         : "com.android.support:appcompat-v7:${androidSupportVersion}",
+               palette           : "com.android.support:palette-v7:${androidSupportVersion}",
+               gson              : "com.google.code.gson:gson:${gsonVersion}",
+               butterknife       : "com.jakewharton:butterknife:${butterknifeVersion}",
+               dagger            : "com.google.dagger:dagger:${daggerVersion}",
+               daggerCompiler    : "com.google.dagger:dagger-compiler:${daggerVersion}",
+               javaXAnnotation   : "javax.annotation:jsr250-api:${javaXAnnotationVersion}",
+               rxjava            : "io.reactivex:rxjava:${rxjavaVersion}",
+               rxandroid         : "io.reactivex:rxandroid:${rxandroidVersion}",
+               androidSupport    : "com.android.support:support-v13:${androidSupportVersion}",
+               supportAnnotations: "com.android.support:support-annotations:${androidSupportVersion}",
+               javaxInject       : "javax.inject:javax.inject:${javaxInjectVersion}",
+               retrofit          : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+               supportDesign     : "com.android.support:design:${androidSupportVersion}",
+
+  ]
+
+  testLibraries = [dexmaker       : "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+                   dexmakerMockito: "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+                   mockito        : "org.mockito:mockito-core:${mockitoVersion}",
+                   junit          : "junit:junit:${junitVersion}",
+                   espresso       : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+                   espressoContrib: "com.android.support.test.espresso:espresso-contrib:${espressoVersion}",
+                   runner         : "com.android.support.test:runner:${runnerVersion}",
+                   rules          : "com.android.support.test:rules:${rulesVersion}"]
+}

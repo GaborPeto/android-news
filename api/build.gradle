@@ -1,5 +1,12 @@
 apply plugin: 'java'
+apply plugin: "net.ltgt.apt"
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile project(':domain')
+  compile rootProject.ext.libraries.gson
+  compile rootProject.ext.libraries.retrofit
+
+  testCompile testLibraries.junit
+  testCompile testLibraries.mockito
+  testApt rootProject.ext.libraries.daggerCompiler
 }

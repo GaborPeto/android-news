@@ -1,0 +1,7 @@
+apply plugin: 'java'
+
+dependencies {
+  testCompile project(':api')
+  testCompile rootProject.ext.testLibraries.junit
+  testCompile rootProject.ext.testLibraries.mockito
+}

@@ -1,4 +1,4 @@
-package com.thinkabstract.exercise.news.domain.services;
+package com.thinkabstract.exercise.news.domain.services.remote;
 
 import com.thinkabstract.exercise.news.domain.model.Feed;
 import com.thinkabstract.exercise.news.domain.model.QueryResult;

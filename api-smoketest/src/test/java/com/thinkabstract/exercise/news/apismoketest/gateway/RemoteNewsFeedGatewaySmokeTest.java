@@ -4,7 +4,7 @@ import com.thinkabstract.exercise.news.api.gateway.RemoteNewsFeedGatewayImp;
 import com.thinkabstract.exercise.news.api.service.NewsFeedServiceFactory;
 import com.thinkabstract.exercise.news.domain.model.Feed;
 import com.thinkabstract.exercise.news.domain.model.QueryResult;
-import com.thinkabstract.exercise.news.domain.services.RemoteNewsFeedGateway;
+import com.thinkabstract.exercise.news.domain.services.remote.RemoteNewsFeedGateway;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;

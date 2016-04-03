@@ -3,7 +3,7 @@ package com.thinkabstract.exercise.news.api.gateway;
 import com.thinkabstract.exercise.news.api.service.NewsFeedService;
 import com.thinkabstract.exercise.news.domain.model.Feed;
 import com.thinkabstract.exercise.news.domain.model.QueryResult;
-import com.thinkabstract.exercise.news.domain.services.RemoteNewsFeedGateway;
+import com.thinkabstract.exercise.news.domain.services.remote.RemoteNewsFeedGateway;
 import java.io.IOException;
 import java.util.List;
 import javax.inject.Inject;

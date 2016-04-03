@@ -6,8 +6,8 @@ android {
   buildToolsVersion rootProject.ext.buildToolsVersion
 
   defaultConfig {
-    minSdkVersion 21
-    targetSdkVersion 23
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.compileSdkVersion
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -27,16 +27,13 @@ android {
 dependencies {
   compile project(':domain')
   compile rootProject.ext.libraries.supportAnnotations
-  apt rootProject.ext.libraries.daggerCompiler
 
   testCompile testLibraries.junit
   testCompile testLibraries.mockito
-  testApt rootProject.ext.libraries.daggerCompiler
 
   androidTestCompile rootProject.ext.testLibraries.junit
   androidTestCompile rootProject.ext.testLibraries.runner
   androidTestCompile rootProject.ext.testLibraries.mockito
   androidTestCompile rootProject.ext.testLibraries.dexmaker
   androidTestCompile rootProject.ext.testLibraries.dexmakerMockito
-  androidTestApt rootProject.ext.libraries.daggerCompiler
 }

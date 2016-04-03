@@ -1,0 +1,69 @@
+{
+  "responseData": {
+    "query": "London",
+    "entries": [
+      {
+        "url": "http://feeds.visitlondon.com/WhatsOnInLondon",
+        "title": "visitlondon.com Your Official London City Guide",
+        "contentSnippet": "Plan and book your trip to London with the official London city guide. Discover things to do, whats on, sightseeing attractions, tours, tickets and more.",
+        "link": "http://www.visitlondon.com/"
+      },
+      {
+        "url": "http://www.theguardian.com/id/rss",
+        "title": "\u003cb\u003eLondon\u003c/b\u003e | UK news | The Guardian",
+        "contentSnippet": "Husband of cyclist killed by \u003cb\u003eLondon\u003c/b\u003e lorry cries as driver is acquitted. Published: ... \u003cbr\u003e\nFrom the Guardian archive Ian Nairn\u0026#39;s guide to \u003cb\u003eLondon\u003c/b\u003e - archive. Published:\u0026nbsp;...",
+        "link": "http://www.theguardian.com/uk/london"
+      },
+      {
+        "url": "http://www.londontourism.ca/rss/inside-london.xml",
+        "title": "Tourism \u003cb\u003eLondon\u003c/b\u003e",
+        "contentSnippet": "\u003cb\u003eLondon\u003c/b\u003e Ontario Canada Tourism Web Site. View \u003cb\u003eLondon\u003c/b\u003e, Ontario, Canada, \u003cbr\u003e\nTourism members and services on virtual tours for the city of \u003cb\u003eLondon\u003c/b\u003e Canada\u0026nbsp;...",
+        "link": "http://www.londontourism.ca/"
+      },
+      {
+        "url": "http://data.london.gov.uk/feed/",
+        "title": "\u003cb\u003eLondon\u003c/b\u003e Datastore – Greater \u003cb\u003eLondon\u003c/b\u003e Authority",
+        "contentSnippet": "Official site providing free access to a number of data-sets from the Greater \u003cbr\u003e\n\u003cb\u003eLondon\u003c/b\u003e Authority.",
+        "link": "http://data.london.gov.uk/"
+      },
+      {
+        "url": "http://feeds.londonandpartners.com/LondonEventsIndustryNews",
+        "title": "\u003cb\u003eLondon\u003c/b\u003e Convention Bureau",
+        "contentSnippet": "\u003cb\u003eLondon\u0026#39;s\u003c/b\u003e official convention bureau, offering free, impartial advice, guidance and \u003cbr\u003e\nsupport.",
+        "link": "http://conventionbureau.london/"
+      },
+      {
+        "url": "http://wikitravel.org/rss/english.rss",
+        "title": "\u003cb\u003eLondon\u003c/b\u003e travel guide - Wikitravel",
+        "contentSnippet": "Open source travel guide to \u003cb\u003eLondon\u003c/b\u003e, featuring up-to-date information on \u003cbr\u003e\nattractions, hotels, restaurants, nightlife, travel tips and more. Free and reliable \u003cbr\u003e\nadvice\u0026nbsp;...",
+        "link": "http://wikitravel.org/en/London"
+      },
+      {
+        "url": "https://www.reddit.com/r/london/.rss",
+        "title": "\u003cb\u003eLondon\u003c/b\u003e, UK - Reddit",
+        "contentSnippet": "Things to do in \u003cb\u003eLondon\u003c/b\u003e! 28/03 - 03/04 ... A Saturday \u003cb\u003eLondon\u003c/b\u003e skyline photo for you\u003cbr\u003e\n... (imgur.com) ... School trip to \u003cb\u003eLondon\u003c/b\u003e with assignment included. Need help\u0026nbsp;...",
+        "link": "https://www.reddit.com/r/london/"
+      },
+      {
+        "url": "http://ci.london.oh.us/index.php?format\u003dfeed\u0026type\u003drss",
+        "title": "The City of \u003cb\u003eLondon\u003c/b\u003e Ohio",
+        "contentSnippet": "The official government web site for The City of \u003cb\u003eLondon\u003c/b\u003e Ohio and the seat of \u003cbr\u003e\nMadison County Ohio.",
+        "link": "http://ci.london.oh.us/"
+      },
+      {
+        "url": "http://www.archdaily.com/feed",
+        "title": "\u003cb\u003eLondon\u003c/b\u003e | Tag | ArchDaily",
+        "contentSnippet": "One Resident\u0026#39;s Argument to Save \u003cb\u003eLondon\u0026#39;s\u003c/b\u003e Central Hill Housing Estate ... The \u003cbr\u003e\nepisode considers the history of \u003cb\u003eLondon\u003c/b\u003e\u0026#39;s urban greenery and the role of plants \u003cbr\u003e\nin\u0026nbsp;...",
+        "link": "http://www.archdaily.com/tag/london"
+      },
+      {
+        "url": "https://weather.gc.ca/rss/city/on-137_e.xml",
+        "title": "\u003cb\u003eLondon\u003c/b\u003e, ON - 7 Day Forecast - Environment Canada",
+        "contentSnippet": "Observed at: \u003cb\u003eLondon\u003c/b\u003e Int\u0026#39;l Airport; Date: 4:00 PM EDT Saturday 2 April 2016. Wind\u003cbr\u003e\n: SW 23 gust 35 km/h: SW 15 gust 22 mph; Wind Chill: -6: 22. Conditions\u0026nbsp;...",
+        "link": "https://weather.gc.ca/city/pages/on-137_metric_e.html"
+      }
+    ]
+  },
+  "responseDetails": null,
+  "responseStatus": 200
+}

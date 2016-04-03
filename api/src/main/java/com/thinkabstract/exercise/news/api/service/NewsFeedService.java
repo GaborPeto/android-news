@@ -1,15 +1,18 @@
 package com.thinkabstract.exercise.news.api.service;
 
-import com.thinkabstract.exercise.news.api.model.ApiFeed;
-import com.thinkabstract.exercise.news.api.model.ApiQueryResult;
-import java.util.List;
+import com.thinkabstract.exercise.news.api.model.feed.RemoteFeedResponse;
+import com.thinkabstract.exercise.news.api.model.query.RemoteQueryResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface NewsFeedService {
 
-  @GET("find") Call<List<ApiQueryResult>> queryFeeds(@Query("q") String query);
+  String FEED_API_VERSION = "1.0";
+  String FEED_API_VERSION_PARAM = "?v=" + FEED_API_VERSION;
 
-  @GET("load") Call<ApiFeed> loadFeed(@Query("q") String feedURl);
+  @GET("find" + FEED_API_VERSION_PARAM) Call<RemoteQueryResponse> queryFeeds(
+      @Query("q") String query);
+
+  @GET("load" + FEED_API_VERSION_PARAM) Call<RemoteFeedResponse> loadFeed(@Query("q") String feedURl);
 }

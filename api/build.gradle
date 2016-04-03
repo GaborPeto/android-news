@@ -1,13 +1,18 @@
 apply plugin: 'java'
 apply plugin: "net.ltgt.apt"
 
+//FIX FOR https://code.google.com/p/android/issues/detail?id=64887
+task copyTestResources(type: Copy) {
+  from "${projectDir}/src/test/resources"
+  into "${buildDir}/classes/test"
+}
+
 dependencies {
   compile project(':domain')
-  compile rootProject.ext.libraries.gson
   compile rootProject.ext.libraries.retrofit
   compile rootProject.ext.libraries.retrofitGsonConverter
+  compile rootProject.ext.libraries.httpLoggingInterceptor
 
   testCompile testLibraries.junit
   testCompile testLibraries.mockito
-  testApt rootProject.ext.libraries.daggerCompiler
 }

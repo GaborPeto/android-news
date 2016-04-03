@@ -30,7 +30,7 @@ public class RemoteFeedEntry {
   public FeedEntry map() {
     FeedEntry entry = new FeedEntry();
     entry.title = title;
-    entry.contentSnipet = contentSnippet;
+    entry.contentSnippet = contentSnippet;
     entry.content = content;
     parseDate(entry);
     return entry;

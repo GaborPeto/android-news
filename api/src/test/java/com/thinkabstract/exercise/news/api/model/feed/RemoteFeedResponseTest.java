@@ -33,7 +33,7 @@ public class RemoteFeedResponseTest extends BaseModelTest {
 
     FeedEntry feedEntry = feed.entries.get(0);
     assertEquals(FEED_ENTRY_TITLE, feedEntry.title);
-    assertEquals(FEED_CONTENT_SNIPET, feedEntry.contentSnipet);
+    assertEquals(FEED_CONTENT_SNIPET, feedEntry.contentSnippet);
     System.out.println(feedEntry.content);
     assertEquals(FEED_CONTENT, feedEntry.content);
     assertEquals(FEED_PUBLISHED_DATE, feedEntry.publishedDate);

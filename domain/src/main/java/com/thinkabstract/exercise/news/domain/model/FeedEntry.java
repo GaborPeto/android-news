@@ -6,7 +6,7 @@ public class FeedEntry {
 
   public String title;
 
-  public String contentSnipet;
+  public String contentSnippet;
 
   public String content;
 
@@ -15,7 +15,7 @@ public class FeedEntry {
   @Override public String toString() {
     return "FeedEntry{" +
         "title='" + title + '\'' +
-        ", contentSnipet='" + contentSnipet + '\'' +
+        ", contentSnippet='" + contentSnippet + '\'' +
         ", content='" + content + '\'' +
         ", publishedDate=" + publishedDate +
         '}';
@@ -34,9 +34,9 @@ public class FeedEntry {
     if (title != null ? !title.equals(feedEntry.title) : feedEntry.title != null) {
       return false;
     }
-    if (contentSnipet != null
-        ? !contentSnipet.equals(feedEntry.contentSnipet)
-        : feedEntry.contentSnipet != null) {
+    if (contentSnippet != null
+        ? !contentSnippet.equals(feedEntry.contentSnippet)
+        : feedEntry.contentSnippet != null) {
       return false;
     }
     if (content != null ? !content.equals(feedEntry.content) : feedEntry.content != null) {
@@ -49,7 +49,7 @@ public class FeedEntry {
 
   @Override public int hashCode() {
     int result = title != null ? title.hashCode() : 0;
-    result = 31 * result + (contentSnipet != null ? contentSnipet.hashCode() : 0);
+    result = 31 * result + (contentSnippet != null ? contentSnippet.hashCode() : 0);
     result = 31 * result + (content != null ? content.hashCode() : 0);
     result = 31 * result + (publishedDate != null ? publishedDate.hashCode() : 0);
     return result;

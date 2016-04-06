@@ -6,6 +6,7 @@ import com.thinkabstract.exercise.news.persistence.model.PersistableFeed;
 import com.thinkabstract.exercise.news.persistence.model.PersistableFeedEntry;
 import io.realm.RealmList;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class PersistableFeedMapper {
@@ -41,7 +42,7 @@ public class PersistableFeedMapper {
         entry.title = persistableFeedEntry.title;
         entry.contentSnippet = persistableFeedEntry.contentSnippet;
         entry.content = persistableFeedEntry.content;
-        entry.publishedDate = persistableFeedEntry.publishedDate;
+        entry.publishedDate = new Date(persistableFeedEntry.publishedDate);
         entries.add(entry);
       }
     }
@@ -63,7 +64,7 @@ public class PersistableFeedMapper {
     persistableFeedEntry.title = entry.title;
     persistableFeedEntry.contentSnippet = entry.contentSnippet;
     persistableFeedEntry.content = entry.content;
-    persistableFeedEntry.publishedDate = entry.publishedDate;
+    persistableFeedEntry.publishedDate = entry.publishedDate.getTime();
     return persistableFeedEntry;
   }
 }

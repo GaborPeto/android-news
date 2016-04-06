@@ -32,6 +32,9 @@ android {
     incremental true
     javaMaxHeapSize "4g"
   }
+  lintOptions {
+    warning 'InvalidPackage'
+  }
 }
 
 dependencies {
@@ -55,7 +58,6 @@ dependencies {
   androidTestCompile rootProject.ext.testLibraries.runner
   androidTestCompile rootProject.ext.testLibraries.rules
   androidTestCompile rootProject.ext.testLibraries.espresso
-  androidTestCompile rootProject.ext.testLibraries.espressoContrib
   androidTestCompile rootProject.ext.testLibraries.mockito
   androidTestCompile rootProject.ext.testLibraries.dexmaker
   androidTestCompile rootProject.ext.testLibraries.dexmakerMockito

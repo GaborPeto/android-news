@@ -5,15 +5,16 @@ import com.thinkabstract.exercise.news.domain.model.Feed;
 import com.thinkabstract.exercise.news.domain.model.FeedEntry;
 import com.thinkabstract.exercise.news.domain.services.local.LocalNewsFeedGateway;
 import com.thinkabstract.exercise.news.persistence.operation.feed.FeedOperation;
+import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import org.junit.Assert;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class LocalNewsFeedGatewayImpTest {
 
@@ -21,6 +22,14 @@ public class LocalNewsFeedGatewayImpTest {
 
   @Before public void setUp() throws Exception {
     initGateway();
+  }
+
+  @After public void tearDown() throws Exception {
+    Realm realm = Realm.getInstance(buildConfiguration());
+    realm.beginTransaction();
+    realm.deleteAll();
+    realm.commitTransaction();
+    realm.close();
   }
 
   @Test public void testSaveLoadFeed() throws Exception {
@@ -51,9 +60,11 @@ public class LocalNewsFeedGatewayImpTest {
   }
 
   private void initGateway() {
-    RealmConfiguration configuration = new RealmConfiguration.Builder(
+    gateway = new LocalNewsFeedGatewayImp(new FeedOperation(buildConfiguration()));
+  }
+
+  private RealmConfiguration buildConfiguration() {
+    return new RealmConfiguration.Builder(
         InstrumentationRegistry.getContext()).deleteRealmIfMigrationNeeded().build();
-    FeedOperation operation = new FeedOperation(configuration);
-    gateway = new LocalNewsFeedGatewayImp(operation);
   }
 }
